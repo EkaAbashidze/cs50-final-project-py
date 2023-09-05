@@ -1,9 +1,10 @@
+import matplotlib.pyplot as plt
+from asciichartpy import plot
+
 def main():
     financial_data = get_info();
     print(financial_data)
     get_percentages(financial_data)
-    
-
 
 def get_info():
     income = int(input("How much was your income last month? "))
