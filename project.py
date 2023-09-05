@@ -1,7 +1,6 @@
 def main():
-    financial_data = []
-    data = get_info();
-    print(data)
+    financial_data = get_info();
+    print(financial_data)
     
 
 
