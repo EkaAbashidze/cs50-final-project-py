@@ -23,5 +23,9 @@ def test_get_percentages():
     assert expected_expense_percentage == 30
     assert expected_savings_percentage == 20
 
-# def test_calculate_net_income():
-#     ...
+def test_calculate_net_income():
+    data = {"income": 1000, "expenses": 300}
+    
+    expected_net_income = data["income"] - data["expenses"]
+    
+    assert expected_net_income == 700
