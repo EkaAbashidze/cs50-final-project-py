@@ -1,10 +1,8 @@
-import matplotlib.pyplot as plt
-from asciichartpy import plot
-
 def main():
     financial_data = get_info();
     print(financial_data)
     get_percentages(financial_data)
+    calculate_net_income(financial_data)
 
 def get_info():
     income = int(input("How much was your income last month? "))
@@ -25,8 +23,16 @@ def get_percentages(data):
     print(f"Savings Percentage: {savings_percentage}%")
 
 
-def function_n():
-    ...
+def calculate_net_income(data):
+    total_income = data["income"]
+    total_expenses = data["expenses"]
+    
+    net_income = total_income - total_expenses
+    
+    print("\nFinancial Summary:")
+    print(f"Total Income: ${total_income}")
+    print(f"Total Expenses: ${total_expenses}")
+    print(f"Net Income: ${net_income}")
 
 
 if __name__ == "__main__":
